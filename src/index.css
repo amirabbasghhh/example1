@@ -1,0 +1,87 @@
+/* :root{
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+} */
+
+*{
+    text-decoration: none;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.bodyy{
+    /* display:flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%; */
+   
+    overflow: hidden;
+    
+}
+.menu .btn{
+    display:block;
+    padding: 1rem;
+    border-bottom: solid 1px #1b1b2f;
+    border-top: solid 1px #1f4068;
+    position: relative;
+}
+
+.menu .submenu {
+    
+    overflow: hidden;
+    max-height: 0;
+    transition: max-height .8s ease-out;
+}
+
+.menu .submenu a{
+    display:block;
+    padding: 1rem;
+    position: relative;
+}
+
+.menu .submenu a::before{
+    content:'';
+    display:block;
+    position: absolute;
+    top:0;
+    right:0;
+    height: 100%;
+    width: 5px;
+    background: black;
+    opacity: 0;
+    transition: all .5s;
+}
+
+
+.menu .submenu a:hover{
+    padding-left: calc(1rem + 5px);
+}
+
+.menu .submenu a:hover::before{
+    opacity: 1;
+}
+
+.item:target .submenu{
+    max-height: 20rem;
+}
+
+
+.a1::after {
+    content: '';
+    display: block;
+    width: 0;
+    height: 4px;
+    background:rgb(205, 26, 26);
+    transition: width .3s;
+}
+
+.a1:hover::after {
+    width: 100%;
+    transition: width .3s;
+}
+
